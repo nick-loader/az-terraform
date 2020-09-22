@@ -2,7 +2,7 @@ FROM ubuntu:18.04
 
 ENV TERRAFORM_VERSION=0.12.29
 
-RUN apt-get update && apt-get install wget zip -y && \
+RUN apt-get update && apt-get install jq wget zip -y && \
     #include libc6-compat as a dep https://github.com/pulumi/pulumi/issues/1986
     wget "https://releases.hashicorp.com/terraform/${TERRAFORM_VERSION}/terraform_${TERRAFORM_VERSION}_linux_amd64.zip" && \
     unzip -o ./terraform_${TERRAFORM_VERSION}_linux_amd64.zip -d /usr/bin/ && \
