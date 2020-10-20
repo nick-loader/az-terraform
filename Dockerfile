@@ -1,6 +1,6 @@
 FROM ubuntu:18.04
 
-ENV TERRAFORM_VERSION=0.12.29
+ENV TERRAFORM_VERSION=0.13.4
 
 RUN apt-get update && apt-get install jq wget zip -y && \
     #include libc6-compat as a dep https://github.com/pulumi/pulumi/issues/1986
